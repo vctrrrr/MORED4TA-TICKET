@@ -115,6 +115,24 @@ const tickets = {
     lieu: lieuConcert,
     prix: prixTicket,
   },
+  "TICKET-007": {
+    nom: "Raph",
+    type: "CHAROLIFE",
+    place: "1060",
+    dateConcert: dateConcert,
+    heure: heureConcert,
+    lieu: lieuConcert,
+    prix: prixTicket,
+  },
+  "TICKET-008": {
+    nom: "Nina K.",
+    type: "VIP-",
+    place: "Cuisine",
+    dateConcert: dateConcert,
+    heure: heureConcert,
+    lieu: lieuConcert,
+    prix: prixTicket,
+  }
 };
 
 const nomTicketP = document.getElementById("nom-ticket");
