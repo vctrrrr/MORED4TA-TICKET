@@ -115,10 +115,6 @@ const tickets = {
     lieu: lieuConcert,
     prix: prixTicket,
   },
-  "TICKET-007": {
-    nom : "raph",
-    type: "f2p",
-    place: "1060",
 };
 
 const nomTicketP = document.getElementById("nom-ticket");
