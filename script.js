@@ -4,7 +4,7 @@ const ticketID = params.get("ticket");
 const dateConcert = "17/06/2025";
 const heureConcert = "20:00";
 const lieuConcert = "Forest National";
-const prixTicket = "29,99€";
+const prixTicket = "39,99€";
 
 gsap.registerPlugin(ScrambleTextPlugin);
 
@@ -52,87 +52,66 @@ function compteARebours(dateConcert, heureConcert) {
 }
 
 const tickets = {
-  "TICKET-000": {
+  "TICKET-0000": {
     nom: "INRACI",
-    type: "VIP",
-    place: "000",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
+    type: "BACKSTAGE",
+    place: "N/A",
   },
-  "TICKET-001": {
+  "TICKET-0001": {
     nom: "Victor G.",
-    type: "VIP+++",
+    type: "VIP",
     place: "1080 RPZ",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
   },
-  "TICKET-002": {
+  "TICKET-0002": {
     nom: "M. Debroux",
     type: "VIP",
     place: "B9 - B10",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
   },
-  "TICKET-003": {
+  "TICKET-0003": {
     nom: "M. Mirza",
     type: "VIP",
     place: "B9 - B10",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
   },
-  "TICKET-004": {
+  "TICKET-0004": {
     nom: "M. Compere",
     type: "VIP",
     place: "B9",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
   },
-  "TICKET-005": {
+  "TICKET-0005": {
     nom: "M. Müller",
     type: "VIP",
     place: "J23",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
   },
-  "TICKET-006": {
+  "TICKET-0006": {
     nom: "Mme. Chantrain",
     type: "VIP",
     place: "B9",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
   },
-  "TICKET-007": {
-    nom: "Raph",
-    type: "CHAROLIFE",
-    place: "1060",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
-  },
-  "TICKET-008": {
+  "TICKET-0007": {
     nom: "Nina K.",
-    type: "VIP-",
-    place: "Cuisine",
-    dateConcert: dateConcert,
-    heure: heureConcert,
-    lieu: lieuConcert,
-    prix: prixTicket,
-  }
+    type: "LY",
+    place: "N/A",
+  },
+  "TICKET-0008": {
+    nom: "Raph",
+    type: "N/A",
+    place: "N/A",
+  },
+  "TICKET-0009": {
+    nom: "N/A",
+    type: "N/A",
+    place: "N/A",
+  },
+  "TICKET-0010": {
+    nom: "N/A",
+    type: "N/A",
+    place: "N/A",
+  },
+  "TICKET-0011": {
+    nom: "N/A",
+    type: "N/A",
+    place: "N/A",
+  },
 };
 
 const nomTicketP = document.getElementById("nom-ticket");
@@ -200,12 +179,13 @@ if (tickets[ticketID]) {
   nomTicketSpan.textContent = ticket.nom;
   typeTicketSpan.textContent = ticket.type;
   placeTicketSpan.textContent = ticket.place;
-  dateConcertTicketSpan.textContent = ticket.dateConcert;
-  heureTicketSpan.textContent = ticket.heure;
-  lieuTicketSpan.textContent = ticket.lieu;
-  prixTicketSpan.textContent = ticket.prix;
 
-  const mettreAJourCompte = compteARebours(ticket.dateConcert, ticket.heure);
+  dateConcertTicketSpan.textContent = dateConcert;
+  heureTicketSpan.textContent = heureConcert;
+  lieuTicketSpan.textContent = lieuConcert;
+  prixTicketSpan.textContent = prixTicket;
+
+  const mettreAJourCompte = compteARebours(dateConcert, heureConcert);
   compteReboursSpan.textContent = mettreAJourCompte();
 
   setInterval(() => {
@@ -238,3 +218,4 @@ if (tickets[ticketID]) {
     ease: "elastic.out(1, 0.3)",
   });
 }
+
