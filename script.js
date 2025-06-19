@@ -1,8 +1,8 @@
 const params = new URLSearchParams(window.location.search);
 const ticketID = params.get("ticket");
 
-const dateConcert = "17/06/2025";
-const heureConcert = "20:00";
+const dateConcert = "03/08/2025";
+const heureConcert = "00:00";
 const lieuConcert = "Forest National";
 const prixTicket = "39,99€";
 
